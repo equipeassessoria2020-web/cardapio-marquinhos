@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point da Massa - Marquinhos Pizzaria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #e63946, #1d3557);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            padding-bottom: 6rem;
+        }
+        .info-box {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #e63946;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .info-box p {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 0.5rem;
+        }
+        .tag {
+            background-color: #e2eafc;
+            color: #1d3557;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        .secao-titulo {
+            font-size: 1.4rem;
+            color: #1d3557;
+            margin: 1.8rem 0 1rem 0;
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 0.3rem;
+        }
+        .produto-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .produto-info h3 {
+            font-size: 1.1rem;
+            color: #2b2d42;
+            margin-bottom: 0.2rem;
+        }
+        .produto-info p {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .preco {
+            font-weight: bold;
+            color: #e63946;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 90%;
+            max-width: 500px;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Point da Massa</h1>
+        <p>🍕 Marquinhos Pizzaria 🍕</p>
+        <p style="margin-top: 5px; font-size: 0.9rem;">📍 Conj. Habitacional - Itapevi / SP</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="info-box">
+            <p><strong>📞 WhatsApp:</strong> (11) 99149-2436</p>
+            <p><strong>⏰ Horário:</strong> Aberto para Jantar e Comida tarde da noite (até 00:00)</p>
+            <p><strong>🛵 Serviços:</strong> Entrega sem contato, Entrega, Para viagem ou Refeição no local</p>
+            <div class="tag-container">
+                <span class="tag">♿ Acessível para Cadeirantes</span>
+                <span class="tag">☕ Ótimo Café</span>
+                <span class="tag">🍷 Bebidas & Vinho</span>
+                <span class="tag">👶 Ideal para Crianças</span>
+                <span class="tag">🏡 Ambiente Aconchegante</span>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: #25d366;">
+            <p><strong>💳 Formas de Pagamento Aceitas:</strong></p>
+            <p style="font-size: 0.85rem; color: #555; margin-top: 5px; line-height: 1.4;">
+                Cartão de Crédito, Cartão de Débito, Pagamentos por celular via NFC, Pix, Alelo, Pluxee, Ticket Restaurante e Vale Refeição.
+            </p>
+        </div>
+
+        <h2 class="secao-titulo">Pizzas Tradicionais</h2>
+
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Muçarela</h3>
+                <p>Molho de tomate fresco, muçarela de alta qualidade, rodelas de tomate e azeitonas.</p>
+            </div>
+            <div class="preco">R$ 35,00</div>
+        </div>
+
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Calabresa</h3>
+                <p>Molho de tomate, calabresa fatiada artesanal, cebola fresca e azeitonas pretas.</p>
+            </div>
+            <div class="preco">R$ 35,00</div>
+        </div>
+
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Portuguesa</h3>
+                <p>Presunto, ovos, cebola, ervilha, muçarela e cobertura especial da casa.</p>
+            </div>
+            <div class="preco">R$ 40,00</div>
+        </div>
+
+        <h2 class="secao-titulo">Pizzas Especiais</h2>
+
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Frango com Catupiry</h3>
+                <p>Frango desfiado temperado coberto com o legítimo Catupiry cremoso.</p>
+            </div>
+            <div class="preco">R$ 42,00</div>
+        </div>
+
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Quatro Queijos</h3>
+                <p>Uma combinação perfeita de muçarela, catupiry, provolone e gorgonzola de primeira.</p>
+            </div>
+            <div class="preco">R$ 45,00</div>
+        </div>
+
+        <h2 class="secao-titulo">Acompanhamentos & Bebidas</h2>
+        
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Porções Variadas</h3>
+                <p>Porções pequenas ideais para acompanhar sua refeição rápida ou bebida.</p>
+            </div>
+            <div class="preco">Sob consulta</div>
+        </div>
+
+        <div class="produto-card">
+            <div class="produto-info">
+                <h3>Cervejas & Destilados</h3>
+                <p>Consulte nossas marcas e opções disponíveis para entrega ou consumo local.</p>
+            </div>
+            <div class="preco">Sob consulta</div>
+        </div>
+
+    </div>
+
+    <a href="https://wa.me/5511991492436?text=Ol%C3%A1%20Marquinhos%2C%20vi%20o%20seu%20card%C3%A1pio%20digital%20e%20gostaria%20de%20fazer%20um%20pedido!" class="btn-whatsapp" target="_blank">
+        📱 Fazer Pedido no WhatsApp
+    </a>
+
+</body>
+</html>
