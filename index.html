@@ -14,6 +14,7 @@
         body {
             background-color: #f8f9fa;
             color: #333;
+            padding-bottom: 80px; /* Espaço para o botão fixo no celular */
         }
         header {
             background: linear-gradient(135deg, #e63946, #1d3557);
@@ -31,53 +32,62 @@
             opacity: 0.9;
         }
         .container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 2rem auto;
             padding: 0 1rem;
-            padding-bottom: 6rem;
         }
         .info-box {
             background: white;
             padding: 1.2rem;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 1.5rem;
-            border-left: 5px solid #e63946;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .borda-vermelha { border-left: 5px solid #e63946; }
+        .borda-azul { border-left: 5px solid #1d3557; }
+        .borda-verde { border-left: 5px solid #25d366; }
+        
+        .info-box h4 {
+            color: #1d3557;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         .info-box p {
-            margin-bottom: 0.4rem;
             font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
         }
-        .info-box p:last-child {
-            margin-bottom: 0;
-        }
-        .tag-container {
+        .tags-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             margin-top: 0.5rem;
         }
         .tag {
-            background-color: #e2eafc;
-            color: #1d3557;
-            font-size: 0.75rem;
+            background-color: #e9ecef;
+            color: #495057;
+            font-size: 0.8rem;
             padding: 4px 10px;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .tag-destaque {
+            background-color: #ffe3e3;
+            color: #e63946;
         }
         .secao-titulo {
             font-size: 1.4rem;
             color: #1d3557;
-            margin: 1.8rem 0 1rem 0;
+            margin: 2rem 0 1rem 0;
             border-bottom: 2px solid #e63946;
             padding-bottom: 0.3rem;
         }
         .produto-card {
             background: white;
-            padding: 1rem;
+            padding: 1.2rem;
             border-radius: 10px;
             margin-bottom: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -98,11 +108,21 @@
             white-space: nowrap;
             margin-left: 1rem;
         }
-        .btn-whatsapp {
+        
+        /* BOTÃO TOTALMENTE CORRIGIDO */
+        .container-botao {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            padding: 12px;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+        }
+        .btn-whatsapp {
             background-color: #25d366;
             color: white;
             text-decoration: none;
@@ -110,14 +130,14 @@
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
             display: flex;
             align-items: center;
             gap: 10px;
-            width: 90%;
-            max-width: 500px;
+            width: 100%;
+            max-width: 550px;
             justify-content: center;
-            z-index: 1000;
+            transition: background 0.3s;
         }
         .btn-whatsapp:hover {
             background-color: #128c7e;
@@ -129,29 +149,45 @@
     <header>
         <h1>Point da Massa</h1>
         <p>🍕 Marquinhos Pizzaria 🍕</p>
-        <p style="margin-top: 5px; font-size: 0.9rem;">📍 Conj. Habitacional - Itapevi / SP</p>
+        <p style="margin-top: 6px; font-size: 0.9rem;">📍 Conj. Habitacional - Itapevi / SP</p>
     </header>
 
     <div class="container">
         
-        <div class="info-box">
-            <p><strong>📞 WhatsApp:</strong> (11) 99149-2436</p>
-            <p><strong>⏰ Horário:</strong> Aberto para Jantar e Comida tarde da noite (até 00:00)</p>
-            <p><strong>🛵 Serviços:</strong> Entrega sem contato, Entrega, Para viagem ou Refeição no local</p>
-            <div class="tag-container">
-                <span class="tag">♿ Acessível para Cadeirantes</span>
-                <span class="tag">☕ Ótimo Café</span>
-                <span class="tag">🍷 Bebidas & Vinho</span>
-                <span class="tag">👶 Ideal para Crianças</span>
-                <span class="tag">🏡 Ambiente Aconchegante</span>
+        <div class="info-box borda-vermelha">
+            <h4>📞 Contato e Funcionamento</h4>
+            <p><strong>WhatsApp:</strong> (11) 99149-2436</p>
+            <p><strong>Horário:</strong> Aberto para Jantar e Comida tarde da noite (até 00:00)</p>
+            <p><strong>Opções de Serviço:</strong> Entrega sem contato, Entrega, Para viagem ou Refeição no local</p>
+        </div>
+
+        <div class="info-box borda-azul">
+            <h4>🏢 Sobre o Estabelecimento</h4>
+            <p><strong>♿ Acessibilidade:</strong> Entrada, assento, banheiro e estacionamento acessíveis para cadeirantes.</p>
+            <p><strong>🛋️ Ambiente & Comodidades:</strong> Espaço aconchegante, casual, tranquilo e com banheiro local. Excelente para grupos, turistas e universitários.</p>
+            <p><strong>👶 Família:</strong> Ótimo para ir com crianças, possui cadeirinhas altas, cardápio infantil e estrutura para aniversários.</p>
+            <p><strong>📝 Planejamento:</strong> Aceita reservas e recomenda-se reserva para o jantar.</p>
+            <div class="tags-container">
+                <span class="tag tag-destaque">☕ Ótimo Café</span>
+                <span class="tag tag-destaque">⚽ Transmissão de Esportes</span>
+                <span class="tag">🍷 Tem Vinho</span>
+                <span class="tag">🍺 Cerveja & Destilados</span>
+                <span class="tag">🍕 Porções e Sobremesas</span>
             </div>
         </div>
 
-        <div class="info-box" style="border-left-color: #25d366;">
-            <p><strong>💳 Formas de Pagamento Aceitas:</strong></p>
-            <p style="font-size: 0.85rem; color: #555; margin-top: 5px; line-height: 1.4;">
-                Cartão de Crédito, Cartão de Débito, Pagamentos por celular via NFC, Pix, Alelo, Pluxee, Ticket Restaurante e Vale Refeição.
-            </p>
+        <div class="info-box borda-verde">
+            <h4>💳 Formas de Pagamento Aceitas</h4>
+            <div class="tags-container">
+                <span class="tag" style="background-color: #eafaf1; color: #25d366; font-weight: bold;">✓ Pix</span>
+                <span class="tag">✓ Alelo</span>
+                <span class="tag">✓ Ticket Restaurante</span>
+                <span class="tag">✓ Vale Refeição</span>
+                <span class="tag">✓ Pluxee</span>
+                <span class="tag">✓ Cartão de Crédito</span>
+                <span class="tag">✓ Cartão de Débito</span>
+                <span class="tag">✓ Pagamento por celular (NFC)</span>
+            </div>
         </div>
 
         <h2 class="secao-titulo">Pizzas Tradicionais</h2>
@@ -193,34 +229,18 @@
         <div class="produto-card">
             <div class="produto-info">
                 <h3>Quatro Queijos</h3>
-                <p>Uma combinação perfeita de muçarela, catupiry, provolone e gorgonzola de primeira.</p>
+                <p>Uma combinação perfeita de muçarela, catupiry, provolone e gorgonzola.</p>
             </div>
             <div class="preco">R$ 45,00</div>
         </div>
 
-        <h2 class="secao-titulo">Acompanhamentos & Bebidas</h2>
-        
-        <div class="produto-card">
-            <div class="produto-info">
-                <h3>Porções Variadas</h3>
-                <p>Porções pequenas ideais para acompanhar sua refeição rápida ou bebida.</p>
-            </div>
-            <div class="preco">Sob consulta</div>
-        </div>
-
-        <div class="produto-card">
-            <div class="produto-info">
-                <h3>Cervejas & Destilados</h3>
-                <p>Consulte nossas marcas e opções disponíveis para entrega ou consumo local.</p>
-            </div>
-            <div class="preco">Sob consulta</div>
-        </div>
-
     </div>
 
-    <a href="https://wa.me/5511991492436?text=Ol%C3%A1%20Marquinhos%2C%20vi%20o%20seu%20card%C3%A1pio%20digital%20e%20gostaria%20de%20fazer%20um%20pedido!" class="btn-whatsapp" target="_blank">
-        📱 Fazer Pedido no WhatsApp
-    </a>
+    <div class="container-botao">
+        <a href="https://wa.me/5511991492436?text=Ol%C3%A1%20Marquinhos%2C%20vi%20o%20seu%20card%C3%A1pio%20digital%20e%20gostaria%20de%20fazer%20um%20pedido!" class="btn-whatsapp" target="_blank">
+            📱 Fazer Pedido no WhatsApp
+        </a>
+    </div>
 
 </body>
 </html>
